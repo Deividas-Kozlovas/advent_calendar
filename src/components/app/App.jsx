@@ -1,13 +1,13 @@
 import { useGlobalContext } from "../../context/context";
-import "./App.css";
+import "./App.scss";
 
 function App() {
   const { days } = useGlobalContext();
 
   return (
-    <div>
+    <div className="grid">
       {days.map((day, index) => (
-        <div key={index}>
+        <div className="grid__card" key={index}>
           <p>{index + 1}</p>
           {day && <span>{day}</span>}
         </div>
