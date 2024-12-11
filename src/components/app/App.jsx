@@ -5,9 +5,14 @@ function App() {
   const { days } = useGlobalContext();
 
   return (
-    <>
-      <p>initail app</p>
-    </>
+    <div>
+      {days.map((day, index) => (
+        <div key={index}>
+          <p>{index + 1}</p>
+          {day && <span>{day}</span>}
+        </div>
+      ))}
+    </div>
   );
 }
 
